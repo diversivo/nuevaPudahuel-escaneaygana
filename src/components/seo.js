@@ -76,10 +76,14 @@ function SEO({
         },
       ].concat(meta)}
 
+      // script={[{
+      //   'data-ad-client': "ca-pub-2113023451507227",
+      //   async: undefined,
+      //   src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      // }]}
+
       script={[{
-        'data-ad-client': "ca-pub-2113023451507227",
-        async: undefined,
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        src:"",
       }]}
     />
   );

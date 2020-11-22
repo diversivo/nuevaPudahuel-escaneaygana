@@ -45,7 +45,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-s3',
       options: {
-        bucketName: 'samsun-b2b-pm',
+        bucketName: 'nuevapudahuel-escaneaygana',
       },
     },
     {
