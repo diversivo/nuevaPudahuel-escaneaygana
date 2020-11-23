@@ -108,6 +108,7 @@ const ContactForm = () => {
   return (
     <form className="index__form form" id="contact-form" method="post">
       <label htmlFor="name-input">
+        Nombre
         <input
           name="name"
           id="name-input"
@@ -120,6 +121,7 @@ const ContactForm = () => {
         <p className="form__helper">{nameError}</p>
       </label>
       <label htmlFor="email-input">
+        Correo
         <input
           name="email"
           id="email-input"
@@ -132,17 +134,35 @@ const ContactForm = () => {
         <p className="form__helper">{emailError}</p>
       </label>
       <label htmlFor="phone-input">
+        Fecha de nacimiento
         <input
           name="phone"
           id="phone-input"
-          type="text"
-          placeholder="Teléfono"
+          type="date"
+          placeholder="dd/mm/aaaa"
           value={phone}
           className={phoneError.length ? 'error' : ''}
           onChange={(e) => setPhone(e.target.value)}
         />
         <p className="form__helper">{phoneError}</p>
       </label>
+
+      <label>Sexo</label>
+      <div className="radio_content">
+        <input type="radio" id="masculino" name="sexo" value="masculino" />
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="femenino" name="sexo" value="femenino" />
+        <label for="femenino">Femenino</label>
+      </div>
+
+      <label for="zone">Zona de aeropuerto</label>
+      <select name="zone" id="zone">
+        <option value="Hall Principal">Zona en la que estás ahora</option>
+        <option value="Hall Principal">Hall Principal</option>
+        <option value="Embarque Nacional">Embarque Nacional</option>
+        <option value="Embarque Internacional">Embarque Internacional</option>
+      </select>
+
       <button
         type="button"
         disabled={!validForm}
@@ -155,7 +175,7 @@ const ContactForm = () => {
           }
         }}
       >
-        {loadingButton ? 'Enviando...' : 'Ingresar'}
+        {loadingButton ? 'Enviando...' : 'ENVIAR'}
       </button>
     </form>
   );

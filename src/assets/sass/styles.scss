@@ -9,69 +9,19 @@
 
 // Global
 
-.index__container{
-    display: grid;
-    grid-template-columns: 60% auto;
-    grid-template-rows: 1fr;
+.container{
     min-height: 100vh;
-    gap: 12px;
     width: 100%;
-    @media only screen and (max-width: $medium){
-        grid-template-columns: 1fr;
-        order: 1;
-    }
-    @media only screen and (max-width: $small){
-        grid-template-columns: 1fr;
-    }
+    padding: 8px 16px;
 }
-
-.index__content-left{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 190px 80px auto;
-    gap: 16px;
-    padding: 2em;
-    place-items: start center;
-}
-
-.index__content-right{
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: center;
-    padding-left: 1em;
-}
-
-// .index__logo-left,.index__logo-right{
-//     padding-bottom: 2em;
-//     padding-top: 1em;
-//     width: 100%;
-//     max-width: 240px;
-// }
-
-.index__branding{
-    max-width: 520px;
+img{
     width: 100%;
 }
 
-.index__right-img{
-    width: 100%;
-    @media only screen and (max-width: $medium){
-        order: 2;
-    }
+.txt-center{
+    text-align: center;
 }
 
-.index__logos{
-    max-width: 520px;
-    width: 100%;
-}
-
-.index__streaming-event{
-    max-width: 220px;
-}
-.index__img{
-    width: 100%;
-}
 .center{
     display: flex;
     align-items: flex-start;
@@ -80,52 +30,6 @@
 
 .padding-1{
     padding: 1em 0;
-}
-// streaming page
-
-.streaming__content{
-    background-image: url('../images/bg-streaming.jpg');
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: 360px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-bottom: 280px;
-    min-height: 100vh;
-    @media only screen and (max-width: $medium){
-        padding: 2em;
-    }
-}
-
-.streaming__branding{
-    width: 100%;
-    max-width: 520px;
-}
-.streaming__branding img{
-    width: 100%;
-    margin: 0 auto;
-}
-
-.streaming__info{
-    font-size: 18px;
-    padding: 2em;
-    max-width: 800px;
-    text-align: center;
-    margin: 0 auto;
-    p{
-        padding-top: 1em;
-    }
-    img{
-        width: 100%;
-    }
-    @media only screen and (max-width: $medium){
-        padding: .9em;
-    }
-    p{
-        font-weight: 500;
-    }
 }
 
 .streaming__box{
@@ -160,10 +64,12 @@
 
 
 .button{
+    --clr-btn-bg : #E61856;
+
     margin-top: 1em;
     padding: .65rem 2rem;
     border-radius: 25px;
-    background-color: var(--color--black);
+    background-color: var(--clr-btn-bg);
     color: var(--color--white);
     text-decoration: none;
     line-height: 1.5em;
@@ -218,29 +124,34 @@ label{
     width: 100%;
 }
 
-input[type=text]{
-    background-color: darken($primary-color, 2%);
-    border: 2px solid black;
+
+select{
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+input[type=text], input[type=date], select{
+    background-color: white;
+    border: 2px solid white;
     border-radius: 9px;
-    color: white;
-    padding: .8em 1.6em;
+    color: black;
+    padding: .64em 1.3em;
     margin: .4em 0;
     width: 100%;
     &:hover{
-        border-color: var(--color--blue);
-        background-color: darken($primary-color, 15%);
+        border-color: cyan;
     }
     &:focus{
         border-color: var(--color--green);
-        background-color: darken($primary-color, 50%);
+        background-color: white;
         outline: none;
     }
     &.error{
         border-color: var(--color--red);
     }
 }
-input::placeholder{
-    color: white;
+input::placeholder,input[type=date]::placeholder{
+    color: #B2B2B2;
 }
 
 .form__helper{
@@ -250,18 +161,15 @@ input::placeholder{
     padding: .5em 1em;
 }
 
-//footer
-
-// .footer__container{
-//     padding: 4rem 0;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-color: rgb(0,0,0);
-//     margin: 0 auto;
-//     @media only screen and (max-width: $medium){
-//         background-size: contain;
-//     } 
-// }
+.radio_content{
+    width: 100%;
+    padding-bottom: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 8px;
+}
 
 .rotate{
     position: absolute;
@@ -348,3 +256,24 @@ input::placeholder{
 //     height: 100%;
 //     border: 0;
 // }
+
+
+.branding{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: flex-start;
+    &_logo{
+        width: 120px;
+        margin-bottom: 14px;
+    }
+    &--ruleta{
+        position: absolute;
+        top: 14px;
+        z-index: 7000;
+        .branding_message{
+            width: 60%;
+        }
+    }
+}

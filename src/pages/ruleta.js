@@ -7,6 +7,7 @@ import MomentumSlider from 'momentum-slider';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import testImage from '../assets/images/ruleta_test.png';
+import Branding from '../components/branding';
 
 const Streaming = ({ location }) => {
 
@@ -180,7 +181,10 @@ const Streaming = ({ location }) => {
 
   return (<Layout>
     <SEO title="Desliza y gana - Nueva Pudahuel" />
-    <main ref={container} className="sliders-container" >
+    <div className="branding--ruleta">
+    <Branding />
+    </div>
+    <main ref={container} className="sliders-container overflow-hidden" >
       <button className="spin-btn" onClick={() => animate(imgSlider, true, winner, minMovement)}>GIRAR RULETA</button>
     </main>
   </Layout>);

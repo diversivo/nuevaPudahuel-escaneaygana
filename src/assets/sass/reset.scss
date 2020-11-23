@@ -1,19 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
-
-*{
-    scroll-behavior: smooth;
-}
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
 
 *,*::before,*::after{
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    color: black;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 body,
@@ -26,7 +23,6 @@ h6,
 ul,ol,li,p,pre,blockquote,figure,hr{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 ul{
@@ -46,7 +42,6 @@ button * {
 
 embed,
 iframe,
-img,
 object,
 video {
     display: block;

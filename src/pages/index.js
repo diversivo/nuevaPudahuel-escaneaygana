@@ -4,6 +4,7 @@ import { browserVersion, isSafari } from 'react-device-detect';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Form from '../components/contact/contact-form';
+import Branding from '../components/branding';
 
 // import OutputLoad from '../components/contact/output-load';
 // import OutputError from '../components/contact/output-error';
@@ -35,14 +36,13 @@ const IndexPage = ({ location }) => {
   }, [])
 
   return <Layout>
-    <SEO title="Samsung b2b Power Meeting - Inicio" />
-    <div className="index__container">
-      <div className="index__content-left">
+    <SEO title="Nuevo Pudahuel - Escanea y Gana" />
+    <div className="container">
+      <div className="content">
+        <Branding />
         {warn ? warn : <Form location={location} />}
         {/* <OutputLoad />
         <OutputError /> */}
-      </div>
-      <div className="index__content-right">
       </div>
     </div>
   </Layout>

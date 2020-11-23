@@ -268,12 +268,6 @@ $color-secondary: rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
 }
 
-body {
-  color: $color-primary;
-  background-color: #1B1C21;
-  overflow: hidden;
-}
-
 a {
   color: $color-primary;
   text-decoration: none;
@@ -405,4 +399,14 @@ a {
     text-transform: uppercase;
     color: white;
   }
+}
+
+body {
+  color: $color-primary;
+  background-color: #1B1C21;
+  // overflow: hidden;
+}
+
+.overflow-hidden{
+  overflow: hidden;
 }
