@@ -96,6 +96,7 @@
   
         // Centering slider track horizontally, to get current slide centered
         .ms-track {
+          flex-direction: row;
           left: calc(50% - #{$slide-width / 2});
         }
   
@@ -149,13 +150,13 @@
 
 // Images
 
-$ms-images-slide-width: 700px;
+$ms-images-slide-width: 280px;
 $ms-images-slide-height: 400px;
 
 // SCSS mixin to generate the final CSS code for the slider
 @include ms(
   $cssClass: 'ms--images', // CSS class to match the slider container
-  $slider-length: 80%,    // The slider container will have full width
+  $slider-length: 100%,    // The slider container will have full width
   $slider-center: true,   // Don't need to center it, as it is full width
   $slide-width: $ms-images-slide-width,   // Fixed width for each slide
   $slide-height: $ms-images-slide-height, // Fixed height for each slide
@@ -173,6 +174,7 @@ $ms-images-slide-height: 400px;
   // }
 
 
+
    // Gradients to hide the adjacent numbers smoothly
    &:before, &:after {
     content: '';
@@ -185,58 +187,22 @@ $ms-images-slide-height: 400px;
   }
   &:before {
     left: 0;
-    background-image: linear-gradient(to right, rgba(11, 12, 13,1) 25%, rgba(11, 12, 13, 0));
+    background-image: linear-gradient(to right, rgba(8, 108, 167,1) 25%, rgba(8, 108, 167, 0));
   }
   &:after {
     right: 0;
-    background-image: linear-gradient(to left, rgba(22, 22, 27, 1) 25%, rgba(22, 22, 27, 0));
-  }
-
-  // Slides images
-  .ms-slide {
-    &:nth-child(1) .ms-slide__image {
-      background-image: url('http://cdn.jsdelivr.net/gh/lmgonzalves/momentum-slider@3b3037f7f1bab402fe3c75cd20ab18e04e1cbe0b/portfolio-carousel/img/harvey-gibson-498362-unsplash.jpg');
-    }
-    &:nth-child(2) .ms-slide__image {
-      background-image: url('http://cdn.jsdelivr.net/gh/lmgonzalves/momentum-slider@3b3037f7f1bab402fe3c75cd20ab18e04e1cbe0b/portfolio-carousel/img/andre-hunter-461305-unsplash.jpg');
-    }
-    &:nth-child(3) .ms-slide__image {
-      background-image: url('http://cdn.jsdelivr.net/gh/lmgonzalves/momentum-slider@3b3037f7f1bab402fe3c75cd20ab18e04e1cbe0b/portfolio-carousel/img/joanna-nix-389128-unsplash.jpg');
-    }
-    &:nth-child(4) .ms-slide__image {
-      background-image: url('http://cdn.jsdelivr.net/gh/lmgonzalves/momentum-slider@3b3037f7f1bab402fe3c75cd20ab18e04e1cbe0b/portfolio-carousel/img/jurica-koletic-321003-unsplash.jpg');
-    }
-    &:nth-child(5) .ms-slide__image {
-      background-image: url('http://cdn.jsdelivr.net/gh/lmgonzalves/momentum-slider@3b3037f7f1bab402fe3c75cd20ab18e04e1cbe0b/portfolio-carousel/img/harvey-gibson-498362-unsplash.jpg');
-    }
-    &:nth-child(6) .ms-slide__image {
-      background-image: url('http://cdn.jsdelivr.net/gh/lmgonzalves/momentum-slider@3b3037f7f1bab402fe3c75cd20ab18e04e1cbe0b/portfolio-carousel/img/andre-hunter-461305-unsplash.jpg');
-    }
-    &:nth-child(7) .ms-slide__image {
-      background-image: url('http://cdn.jsdelivr.net/gh/lmgonzalves/momentum-slider@3b3037f7f1bab402fe3c75cd20ab18e04e1cbe0b/portfolio-carousel/img/joanna-nix-389128-unsplash.jpg');
-    }
-    &:nth-child(8) .ms-slide__image {
-      background-image: url('http://cdn.jsdelivr.net/gh/lmgonzalves/momentum-slider@3b3037f7f1bab402fe3c75cd20ab18e04e1cbe0b/portfolio-carousel/img/jurica-koletic-321003-unsplash.jpg');
-    }
-    &:nth-child(9) .ms-slide__image {
-      background-image: url('http://cdn.jsdelivr.net/gh/lmgonzalves/momentum-slider@3b3037f7f1bab402fe3c75cd20ab18e04e1cbe0b/portfolio-carousel/img/harvey-gibson-498362-unsplash.jpg');
-    }
-    &:nth-child(10) .ms-slide__image {
-      background-image: url('http://cdn.jsdelivr.net/gh/lmgonzalves/momentum-slider@3b3037f7f1bab402fe3c75cd20ab18e04e1cbe0b/portfolio-carousel/img/andre-hunter-461305-unsplash.jpg');
-    }
-    &:nth-child(11) .ms-slide__image {
-      background-image: url('http://cdn.jsdelivr.net/gh/lmgonzalves/momentum-slider@3b3037f7f1bab402fe3c75cd20ab18e04e1cbe0b/portfolio-carousel/img/joanna-nix-389128-unsplash.jpg');
-    }
-    &:nth-child(12) .ms-slide__image {
-      background-image: url('http://cdn.jsdelivr.net/gh/lmgonzalves/momentum-slider@3b3037f7f1bab402fe3c75cd20ab18e04e1cbe0b/portfolio-carousel/img/jurica-koletic-321003-unsplash.jpg');
-    }
+    background-image: linear-gradient(to left, rgba(8, 108, 167,1) 25%, rgba(8, 108, 167, 0));
   }
 
   .ms-slide__image-container {
-    width: 80%;
-    height: 100%;
+    width: 250px;
+    height: 98%;
     background-color: rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 3px 0px rgba(255, 255, 255, 0.75);
   }
 
   .ms-slide__image {
@@ -249,180 +215,68 @@ $ms-images-slide-height: 400px;
 
 // Numbers
 
-$ms-numbers-slide-width: 240px;
+$ms-numbers-slide-width: 200px;
 $ms-numbers-slide-height: 240px;
 
+
+// Titles
+
+$ms-titles-slide-width: 280px;
+$ms-titles-slide-height: 100px;
+
 @include ms(
-  $cssClass: 'ms--numbers',
-  $slider-length: $ms-numbers-slide-width,
-  $slider-center: false,
-  $slide-width: $ms-numbers-slide-width,
-  $slide-height: $ms-numbers-slide-height,
+  $cssClass: 'ms--titles',
+  $slider-length: 100%,
+  $slider-center: true,
+  $slide-width: $ms-titles-slide-width,
+  $slide-height: $ms-titles-slide-height,
   $vertical: false,
   $reverse: false,
   $debug: false
 );
 
-.ms--numbers {
-  position: absolute;
-  left: calc(50% - #{$ms-images-slide-width / 2 + 30px});
-  top: calc(50% - #{$ms-images-slide-height / 2 + $ms-numbers-slide-height / 2 - 20px});
-  z-index: -1;
-  pointer-events: none;
-
-  .ms-slide {
-    font-size: 9em;
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.2);
-  }
-}
-
-// Titles
-
-$ms-titles-slide-width: 400px;
-$ms-titles-slide-height: 170px;
-
-@include ms(
-  $cssClass: 'ms--titles',
-  $slider-length: $ms-titles-slide-height,
-  $slider-center: false,
-  $slide-width: $ms-titles-slide-width,
-  $slide-height: $ms-titles-slide-height,
-  $vertical: true,
-  $reverse: true,
-  $debug: false
-);
-
 .ms--titles {
   position: absolute;
-  left: calc(50% - #{$ms-images-slide-width / 2 + 70px});
-  top: calc(50% - #{$ms-titles-slide-height / 2});
+  // left: calc(50% + 4 - #{$ms-images-slide-width / 2});
+  top: calc(50% + 140px - #{$ms-titles-slide-height / 2});
   z-index: 1;
   pointer-events: none;
+  text-align: center;
 
   .ms-track {
     white-space: normal;
   }
 
   .ms-slide {
-    font-size: 3.3em;
+    // font-size: 3.3em;
     font-weight: 600;
+    display: flex !important;
+    flex-wrap: wrap;
+
+    span{
+      width: 90%;
+      font-size: 10px;
+      color: #747474;
+    }
 
     h3 {
+      width: 90%;
+      color: #E61856;
       margin: 0;
-      text-shadow: 1px 1px 2px black;
+      // text-shadow: 1px 1px 2px black;
     }
   }
 }
-
-
-// Links
-
-$ms-links-slide-width: 120px;
-$ms-links-slide-height: 60px;
-
-@include ms(
-  $cssClass: 'ms--links',
-  $slider-length: $ms-links-slide-height,
-  $slider-center: false,
-  $slide-width: $ms-links-slide-width,
-  $slide-height: $ms-links-slide-height,
-  $vertical: true,
-  $reverse: false,
-  $debug: false
-);
-
-.ms--links {
-  position: absolute;
-  left: calc(50% - #{$ms-images-slide-width / 2 + 70px});
-  top: calc(50% + #{$ms-titles-slide-height / 2 + 20px});
-  z-index: 1;
-
-  .ms-track {
-    white-space: normal;
-  }
-
-  .ms-slide__link {
-    font-weight: 600;
-    padding: 5px 0 8px;
-    border-bottom: 2px solid white;
-    cursor: pointer;
-  }
-}
-
-
-// Pagination
-
-.pagination {
-  display: flex;
-  position: absolute;
-  left: calc(50% - #{$ms-images-slide-width / 2 + 70px});
-  top: calc(100%);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  z-index: 1;
-
-  &__button {
-    display: inline-block;
-    position: relative;
-    width: 36px;
-    height: 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    
-    &:before, &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: calc(50% - 1px);
-      width: 100%;
-      box-shadow: 0 1px 0 #0B0D14;
-    }
-    
-    &:before {
-      height: 2px;
-      background-color: #6A3836;
-    }
-    
-    &:after {
-      height: 3px;
-      background-color: #DC4540;
-      opacity: 0;
-      transition: 0.5s opacity;
-    }
-  }
-}
-
-.pagination__item--active .pagination__button:after {
-  opacity: 1;
-}
-
 
 // Responsive styles
 
 @media screen and (max-width: 860px) {
-  .ms--numbers {
-    left: calc(50% - #{$ms-numbers-slide-width / 2});
-  }
 
-  .ms--titles {
-    left: calc(50% - #{$ms-titles-slide-width / 2});
-    top: calc(50% - #{$ms-titles-slide-height / 2 + 50px});
-    text-align: center;
-  }
-
-  .ms--links {
-    left: calc(50% - #{$ms-links-slide-width / 2});
-    top: calc(50% + #{$ms-links-slide-height / 2 + 50px});
-  }
-
-  .pagination {
-    left: 50%;
-    top: calc(100% - 50px);
-    transform: translateX(-50%);
-  }
+  // .ms--titles {
+  //   left: calc(50% - #{$ms-titles-slide-width / 2});
+  //   top: calc(50% - #{$ms-titles-slide-height / 2 + 50px});
+  //   text-align: center;
+  // }
 }
 
 @media screen and (max-width: 600px) {
@@ -432,11 +286,13 @@ $ms-links-slide-height: 60px;
 }
 
 @media screen and (max-width: 400px) {
-  .ms--titles {
-    .ms-slide {
-      transform: scale(0.8);
-    }
-  }
+  // .ms--titles {
+  //   .ms-slide {
+  //     font-size: 16px;
+  //     h3{
+  //     }
+  //   }
+  // }
 }
 
 
@@ -464,19 +320,8 @@ a {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.1);
-
-  &:before {
-    content: '';
-    position: absolute;
-    left: -150%;
-    top: 0;
-    width: 300%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    transform: rotate(45deg);
-    z-index: -1;
-  }
+  width: 100%;
+  background-color:  rgba(8, 108, 167, 1);
 }
 
 .header {
@@ -539,4 +384,16 @@ a {
   .header__menu, .footer {
     display: none;
   }
+}
+
+.spin-btn{
+
+  width: 290px;
+  margin: 0 auto;
+  height: 47px;
+  // background: var(--unnamed-color-e61856) 0% 0% no-repeat padding-box;
+  background: #E61856 0% 0% no-repeat;
+  border: 1px solid  #E61856;
+  border-radius: 24px;
+  opacity: 1;
 }
