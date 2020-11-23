@@ -32,7 +32,6 @@ function SEO({
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const defer = undefined;
 
   return (
     <Helmet
@@ -81,10 +80,6 @@ function SEO({
       //   async: undefined,
       //   src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       // }]}
-
-      script={[{
-        src:"",
-      }]}
     />
   );
 }

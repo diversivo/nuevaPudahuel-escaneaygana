@@ -21,3 +21,18 @@ exports.onCreateNode = args => {
     })
   }
 }
+
+exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+  if (stage === "build-html") {
+    actions.setWebpackConfig({
+      module: {
+        rules: [
+          {
+            test: /momentum-slider/,
+            use: loaders.null(),
+          },
+        ],
+      },
+    })
+  }
+}
