@@ -70,8 +70,12 @@ p + p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 8px;
+    gap: 16px 16px;
     place-items: center center;
+    img{
+        width: 100%;
+        margin: 0;
+    }
 }
 
 // Flex direction
@@ -81,4 +85,10 @@ p + p {
 
 .row-reverse{
     flex-direction: row-reverse;
+}
+
+.title{
+    color: #00D8FF;
+    text-align: center;
+    padding: 16px 0;
 }

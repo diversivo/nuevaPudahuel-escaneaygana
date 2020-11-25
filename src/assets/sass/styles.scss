@@ -163,3 +163,29 @@ body{
     justify-content: center;
     margin-right: 8px;
 }
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 16px;
+}
+
+.rrss{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    a{
+        margin: 8px;
+    }
+    img{
+        width: 100%;
+        max-width: 24px;
+    }
+}
+
+.footer__branding{
+    width: 160px;
+    margin-bottom: 16px;
+}

@@ -6,6 +6,8 @@ import SEO from '../components/seo';
 import Branding from '../components/branding';
 
 import Bigboy from '../assets/images/bigboy.png';
+import Brands from '../components/trademarks';
+import Rrss from '../components/rrss';
 
 // import OutputLoad from '../components/contact/output-load';
 // import OutputError from '../components/contact/output-error';
@@ -41,7 +43,7 @@ const IndexPage = ({ location }) => {
     <div className="container">
       <div className="content">
         <Branding />
-        <h1 className="txt-center">COMO JUGAR</h1>
+        <h1 className="title">¿CÓMO JUGAR?</h1>
         <div className="align-start-center">
           <div className="number">1</div>
           <h2>Escanea los QR</h2>
@@ -63,7 +65,9 @@ const IndexPage = ({ location }) => {
           <div className="number">3</div>
           <h2>¡Juega y descubre tu premio!</h2>
         </div>
-
+        <h1 className="title">MARCAS ADHERIDAS</h1>
+        <Brands />
+        <Rrss />
       </div>
     </div>
   </Layout>
