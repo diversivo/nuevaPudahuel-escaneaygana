@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "img": "imagenX",
+    "store": "Britt",
+    "zone": [
+      0,
+      1,
+      2
+    ],
+    "promo_text": "10 % descuento",
+    "cantidad": 5000,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "BRT00001",
+    "min_edad": 0,
+    "max_edad": -1,
+    "intrastore_prob": 1,
+    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "code": "",
+    "code_type": "generated"
+  },
+  {
+    "id": 2,
+    "img": "imagenX",
+    "store": "Macdonalds",
+    "zone": [
+      0
+    ],
+    "promo_text": "20 % descuento",
+    "cantidad": 100,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "MCD00001",
+    "min_edad": 0,
+    "max_edad": -1,
+    "intrastore_prob": 1,
+    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "code": "",
+    "code_type": "generated"
+  },
+  {
+    "id": 3,
+    "img": "imagenX",
+    "store": "Dufry",
+    "zone": [
+      0,
+      1
+    ],
+    "promo_text": "Ganaste membresía RED By Dufry GOLD",
+    "cantidad": 2500,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "DFR00001",
+    "min_edad": 18,
+    "max_edad": -1,
+    "intrastore_prob": 0.5,
+    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "code": "CLGOLD12",
+    "code_type": "fixed"
+  },
+  {
+    "id": 4,
+    "img": "imagenX",
+    "store": "Dufry",
+    "zone": [
+      0,
+      1
+    ],
+    "promo_text": "Ganaste membresía RED By Dufry PLATINUM",
+    "cantidad": 2500,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "DFR00001",
+    "min_edad": 18,
+    "max_edad": -1,
+    "intrastore_prob": 0.5,
+    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "code": "PLATINUM12CL",
+    "code_type": "fixed"
+  },
+  {
+    "id": 5,
+    "img": "imagenX",
+    "store": "Bobbi Brown",
+    "zone": [
+      0
+    ],
+    "promo_text": "15% dscto. en tu compra",
+    "cantidad": 2000,
+    "HOMBRE O MUJER": [
+      1
+    ],
+    "CODIGO": "BBR00001",
+    "min_edad": 30,
+    "max_edad": 60,
+    "intrastore_prob": 1,
+    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "code": "",
+    "code_type": "generated"
+  },
+  {
+    "id": 6,
+    "img": "imagenX",
+    "store": "Swarovski",
+    "zone": [
+      0
+    ],
+    "promo_text": "20% dscto.",
+    "cantidad": 2000,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "foto mujer",
+    "min_edad": 35,
+    "max_edad": -1,
+    "intrastore_prob": 1,
+    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "code": "",
+    "code_type": "generated"
+  },
+  {
+    "id": 7,
+    "img": "imagenX",
+    "store": "Tamarugo",
+    "zone": [
+      0
+    ],
+    "promo_text": "2x1 en pisco sour catedral",
+    "cantidad": 5000,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "GENERAR",
+    "min_edad": 18,
+    "max_edad": -1,
+    "intrastore_prob": 1,
+    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "code": "",
+    "code_type": "generated"
+  },
+  {
+    "id": 8,
+    "img": "imagenX",
+    "store": "Starbucks",
+    "zone": [
+      0
+    ],
+    "promo_text": "Latte gratis por la compra de Croissant Pavo Queso",
+    "cantidad": 1000,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "ALG945678",
+    "min_edad": 0,
+    "max_edad": -1,
+    "intrastore_prob": 0.6,
+    "legal_text": "solo para local de aeropuerto de santiago.o Sujeto a stock. Latte Alto gratis no incluye adicionales como sabores, leche alternativa y cambio de grano.",
+    "code": "amg",
+    "code_type": "file"
+  },
+  {
+    "id": 9,
+    "img": "imagenX",
+    "store": "Starbucks",
+    "zone": [
+      0
+    ],
+    "promo_text": "Llévate un tazón de Chile por sólo $500 al comprar cualquier bebida tamaño Grande o Venti.",
+    "cantidad": 250,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "AMG744808",
+    "min_edad": 0,
+    "max_edad": -1,
+    "intrastore_prob": 0.3,
+    "legal_text": "solo para local de aeropuerto de santiago. o Sujeto a stock. Sólo válido para tazón de Chile (SKU 44801224821)",
+    "code": "alg",
+    "code_type": "file"
+  },
+  {
+    "id": 10,
+    "img": "imagenX",
+    "store": "Starbucks",
+    "zone": [
+      0
+    ],
+    "promo_text": "¡Felicitaciones! ¡Ganaste un premio! Acércate a nuestra tienda para conocer el tazón o tumbler que has ganado.",
+    "cantidad": 5,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "ATG673218",
+    "min_edad": 0,
+    "max_edad": -1,
+    "intrastore_prob": 0.1,
+    "legal_text": "Debe hacer una compra mínima de $1.000 para canjear el premio.",
+    "code": "atg",
+    "code_type": "file"
+  },
+  {
+    "id": 11,
+    "img": "imagenX",
+    "store": "Protege tu viaje",
+    "zone": [
+      2
+    ],
+    "promo_text": "50% de descuento en plan anual",
+    "cantidad": 5000,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "GENERAR",
+    "min_edad": 18,
+    "max_edad": -1,
+    "intrastore_prob": 1,
+    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "code": "",
+    "code_type": "generated"
+  },
+  {
+    "id": 12,
+    "img": "imagenX",
+    "store": "Victoria Secret",
+    "zone": [
+      0
+    ],
+    "promo_text": "lleva un cosmetiquero por compras sobre $50.000",
+    "cantidad": 328,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "ok",
+    "min_edad": 25,
+    "max_edad": -1,
+    "intrastore_prob": 0.6,
+    "legal_text": "solo para locales del aeropuerto de stgo, hasta agotar stock",
+    "code": "",
+    "code_type": "generated"
+  },
+  {
+    "id": 13,
+    "img": "imagenX",
+    "store": "Victoria Secret",
+    "zone": [
+      0
+    ],
+    "promo_text": "lleva un bolso victoria secret por compras sobre $50.000",
+    "cantidad": 228,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "ok",
+    "min_edad": 25,
+    "max_edad": -1,
+    "intrastore_prob": 0.4,
+    "legal_text": "solo para locales del aeropuerto de stgo, hasta agotar stock",
+    "code": "",
+    "code_type": "generated"
+  },
+  {
+    "id": 14,
+    "img": "imagenX",
+    "store": "Fotokina",
+    "zone": [
+      2
+    ],
+    "promo_text": "lleva un marco de fotos o llavero por compras sobre $15.000",
+    "cantidad": 100,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "",
+    "min_edad": 0,
+    "max_edad": -1,
+    "intrastore_prob": 1,
+    "legal_text": "solo para locales del aeropuerto de stgo, hasta agotar stock",
+    "code": "",
+    "code_type": "generated"
+  },
+  {
+    "id": 15,
+    "img": "imagenX",
+    "store": "MAPFRE",
+    "zone": [
+      2
+    ],
+    "promo_text": "10% descuento en tu asistencia en viaje",
+    "cantidad": 2000,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "GENERAR",
+    "min_edad": 18,
+    "max_edad": -1,
+    "intrastore_prob": 0.4,
+    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "code": "",
+    "code_type": "generated"
+  },
+  {
+    "id": 16,
+    "img": "imagenX",
+    "store": "MAPFRE",
+    "zone": [
+      2
+    ],
+    "promo_text": "15% descuento en tu asistencia en viaje",
+    "cantidad": 2000,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "GENERAR",
+    "min_edad": 18,
+    "max_edad": -1,
+    "intrastore_prob": 0.4,
+    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "code": "",
+    "code_type": "generated"
+  },
+  {
+    "id": 17,
+    "img": "imagenX",
+    "store": "MAPFRE",
+    "zone": [
+      2
+    ],
+    "promo_text": "50% descuento en tu asistencia en viaje",
+    "cantidad": 1000,
+    "HOMBRE O MUJER": [
+      0,
+      1
+    ],
+    "CODIGO": "GENERAR",
+    "min_edad": 18,
+    "max_edad": -1,
+    "intrastore_prob": 0.2,
+    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "code": "",
+    "code_type": "generated"
+  }
+]
