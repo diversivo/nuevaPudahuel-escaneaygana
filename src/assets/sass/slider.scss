@@ -241,7 +241,7 @@ $ms-titles-slide-height: 100px;
   }
 
   .ms-slide {
-    // font-size: 3.3em;
+    font-size: 1em;
     font-weight: 600;
     display: flex !important;
     flex-wrap: wrap;
@@ -253,7 +253,7 @@ $ms-titles-slide-height: 100px;
     }
 
     h3 {
-      width: 90%;
+      width: 80%;
       color: #E61856;
       margin: 0;
       // text-shadow: 1px 1px 2px black;
@@ -363,7 +363,7 @@ a {
 .reward__overlay {
   background-image: linear-gradient(to bottom, rgba(16, 74, 113,1) 2%, rgba(16, 74, 113,0));
   width: 100%;
-  height: 100%;
+  height: 50%;
   margin-top: 20px;
   display: block;
   z-index: 10;
