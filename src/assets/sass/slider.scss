@@ -361,9 +361,14 @@ a {
 }
 
 .reward__overlay {
-  background-image: linear-gradient(to bottom, rgba(16, 74, 113,1) 2%, rgba(16, 74, 113,0));
+  background-image: linear-gradient(
+    to bottom, 
+    rgba(16, 74, 113,1) 2%, 
+    rgba(16, 74, 113,0),
+    rgba(16, 74, 113,0)
+    );
   width: 100%;
-  height: 50%;
+  height: 100%;
   margin-top: 20px;
   display: block;
   z-index: 10;

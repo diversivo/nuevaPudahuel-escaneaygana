@@ -5,6 +5,8 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Form from '../components/contact/contact-form';
 import Branding from '../components/branding';
+import Rrss from '../components/rrss';
+
 
 // import OutputLoad from '../components/contact/output-load';
 // import OutputError from '../components/contact/output-error';
@@ -44,6 +46,7 @@ const Ruleta = ({ location }) => {
         {/* <OutputLoad />
         <OutputError /> */}
       </div>
+      <Rrss />
     </div>
   </Layout>
 };

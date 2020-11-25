@@ -9,10 +9,9 @@ const Rrss = () => (
   <div className="footer">
     <img className="footer__branding" src={logoNuevoPudahuel} alt="Logo Nuevo Pudahuel" />
     <div className="rrss">
-      <a><img src={Linkedin}></img></a>
-      <a><img src={Facebook}></img></a>
-      <a><img src={Twitter}></img></a>
-      <a><img src={Instagram}></img></a>
+      <a href="https://web.facebook.com/NuevoPudahuel?_rdc=1&_rdr"><img src={Facebook}></img></a>
+      <a href="https://twitter.com/NuevoPudahuel/"><img src={Twitter}></img></a>
+      <a href="https://www.instagram.com/aeropuertoamb/"><img src={Instagram}></img></a>
     </div>
   </div>
 )

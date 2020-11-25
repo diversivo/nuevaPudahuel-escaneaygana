@@ -73,7 +73,9 @@ const Game = ({ location }) => {
 
   return (<Layout>
     <SEO title="Desliza y gana - Nueva Pudahuel" />
-    <Branding />
+    <div className="branding--ruleta">
+    <Branding/>
+    </div>
     <Ruleta submitToAPI={submitToAPI} />
   </Layout>);
 }
