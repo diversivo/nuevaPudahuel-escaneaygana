@@ -231,7 +231,7 @@ $ms-titles-slide-height: 100px;
 .ms--titles {
   position: absolute;
   // left: calc(50% + 4 - #{$ms-images-slide-width / 2});
-  top: calc(50% + 140px - #{$ms-titles-slide-height / 2});
+  top: calc(50% + 70px - #{$ms-titles-slide-height / 2});
   z-index: 1;
   pointer-events: none;
   text-align: center;
@@ -274,14 +274,14 @@ a {
   cursor: pointer;
 }
 
-.container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
-  background-color:  rgba(8, 108, 167, 1);
-}
+// .container {
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+//   width: 100%;
+//   background-color:  rgba(8, 108, 167, 1);
+// }
 
 .header {
   display: flex;
@@ -331,6 +331,7 @@ a {
 .sliders-container {
   position: relative;
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
   flex: 1;
@@ -346,9 +347,9 @@ a {
 }
 
 .spin-btn{
-  position: absolute;
-  top: calc(50% + 200px  );
-  left: calc(50%-145px);
+  // position: absolute;
+  // top: calc(50% + 200px  );
+  // left: calc(50%-145px);
   width: 290px;
   margin: 0 auto;
   height: 47px;
@@ -368,7 +369,6 @@ a {
   z-index: 10;
   font-size: 8px;
   padding-top: 10px;
-
 
   .reward__code{
     border-radius: 30px;

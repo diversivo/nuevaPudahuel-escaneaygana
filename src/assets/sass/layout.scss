@@ -1,30 +1,27 @@
 // LAYOUT
 
-.content{
-    width: 100%;
-    max-width: $max-width;
+* + * {
     margin: 0 auto;
-    padding: 8px 0;
+    margin-top: 8px;
 }
 
-.grid-col40-col60{
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 100%;
-    grid-gap: 36px;
-    height: 100%;
-    justify-content: space-between;
-    justify-items: stretch;
-    @media only screen and (max-width: $medium){
-        grid-template-columns: 35% 65%;
-        grid-template-rows: auto;
-        grid-gap: 27px;
-    }
-    @media only screen and (max-width: $small){
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        grid-gap: 18px;
-    }
+p + p {
+    padding-top: 16px;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 8px 16px;
+    margin: 0 auto;
+}
+
+.content{
+    width: 100%;
+    margin: 0 auto;
+    padding: 8px 0;
+    max-width: var(--max-width);
+    border: 1px solid red;
 }
 
 .content__left, .content__right{
@@ -51,6 +48,13 @@
     justify-content: center;
 }
 
+.align-start-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 // flex for two
 
 .flex-two-col{
@@ -62,15 +66,12 @@
     }
 }
 
-.grid-2col{
+.grid-2-col{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 48px;
+    gap: 8px;
     place-items: center center;
-    @media only screen and (max-width: $small){
-        grid-template-columns: 1fr;
-    }
 }
 
 // Flex direction

@@ -5,17 +5,19 @@
 @import "slider";
 @import url("https://use.typekit.net/gmy5mcq.css");
 
+@import"components/button";
+@import"components/form";
+
 // @import url("https://use.typekit.net/gmy5mcq.css");
 
 // Global
 
-.container{
-    min-height: 100vh;
-    width: 100%;
-    padding: 8px 16px;
-}
-img{
-    width: 100%;
+// img{
+//     width: 100%;
+// }
+
+body{
+    background-color: rgb(8, 108, 167);
 }
 
 .txt-center{
@@ -30,145 +32,6 @@ img{
 
 .padding-1{
     padding: 1em 0;
-}
-
-.streaming__box{
-    padding: 2em 0;
-    background-color: rgba(255,255,255,.5);
-    border-radius: 18px;
-    color: black;
-    text-align: center;
-}
-
-.streaming__countdown{
-    display: grid;
-    gap: 48px;
-    place-items: center;
-    grid-template-columns: repeat(4, 1fr);
-    @media only screen and(max-width: $small){
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.streaming__clock{
-    position: relative;
-}
-
-.timer{
-    padding: 35px 43px;
-    font-weight: 100;
-    font-size: 36px;
-}
-
-// buttons
-
-
-.button{
-    --clr-btn-bg : #E61856;
-
-    margin-top: 1em;
-    padding: .65rem 2rem;
-    border-radius: 25px;
-    background-color: var(--clr-btn-bg);
-    color: var(--color--white);
-    text-decoration: none;
-    line-height: 1.5em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-    border: none;
-    outline: none;
-    position: relative;
-    transition: background-color .3s,box-shadow .3s;
-    cursor: pointer;
-    &:hover{
-        background-color: var(--color--primary--active);
-    }
-    &:active{
-        transform: scale(.98,.98);
-        filter: brightness(250%);
-    }
-    @media only screen and (max-width: $small){
-        width: 100%;
-    }
-}
-
-.button--disabled{
-    background-color: var(--color--gray);
-    &:hover{
-        background-color: var(--color--gray);
-        color: var(--color--white);
-        cursor: not-allowed;
-    }
-    &:active{
-        transform: scale(1,1);
-        filter: brightness(100%);
-    }
-}
-
-//forms
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    max-width: 360px;
-    padding-top: 1em;
-    width: 100%;
-}
-
-label{
-    margin-top: .36em;
-    font-size: 14px;
-    width: 100%;
-}
-
-
-select{
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
-}
-input[type=text], input[type=date], select{
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 9px;
-    color: black;
-    padding: .64em 1.3em;
-    margin: .4em 0;
-    width: 100%;
-    &:hover{
-        border-color: cyan;
-    }
-    &:focus{
-        border-color: var(--color--green);
-        background-color: white;
-        outline: none;
-    }
-    &.error{
-        border-color: var(--color--red);
-    }
-}
-input::placeholder,input[type=date]::placeholder{
-    color: #B2B2B2;
-}
-
-.form__helper{
-    color: var(--color--red);
-    font-size: 11px;
-    font-weight: 700;
-    padding: .5em 1em;
-}
-
-.radio_content{
-    width: 100%;
-    padding-bottom: 14px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 8px;
 }
 
 .rotate{
@@ -195,8 +58,6 @@ input::placeholder,input[type=date]::placeholder{
     right: 0;
     text-align: center;
 }
-
-
 
 .response-box{
     border-radius: 18px;
@@ -276,4 +137,29 @@ input::placeholder,input[type=date]::placeholder{
             width: 60%;
         }
     }
+}
+
+.sliders__intructions{
+    text-align: center;
+    margin: 0 auto;
+    img{
+        width: 36px;
+    }
+}
+
+.number{
+    --number-bg : var(--clr-primary);
+    --number-clr : white;
+    --number-size : 32px;
+
+    width: var(--number-size);
+    height: var(--number-size);
+    border-radius: 25px;
+    background-color: var(--number-bg);
+    color: var(--number-clr);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
 }

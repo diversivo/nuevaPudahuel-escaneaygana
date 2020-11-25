@@ -1,5 +1,4 @@
 
-$max-width : 1320px;
 $primary-color: #1c1c1c;
 $gray-color: #909090;
 
@@ -8,8 +7,9 @@ $medium     :   800px;
 $large      :   1200px;
 
 :root{
-
+    --max-width: 440px;
     //colors
+    --clr-primary : #E61856;
     --color--gray: #e0e0e0;
     --color--blue: #0000FF;
     --color--green: #1ab817;

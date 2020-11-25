@@ -1,0 +1,45 @@
+
+.button{
+  --clr-btn-bg : #E61856;
+  --clr-btn-text : white;
+  --clr-btn-bg-hover: #D11C53;
+
+  margin-top: 1em;
+  padding: .65rem 2rem;
+  border-radius: 25px;
+  background-color: var(--clr-btn-bg);
+  color: var(--clr-btn-text);
+  text-decoration: none;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  border: none;
+  outline: none;
+  position: relative;
+  transition: background-color .3s,box-shadow .3s;
+  cursor: pointer;
+  &:hover{
+      background-color: var(--clr-btn-bg-hover);
+  }
+  &:active{
+      transform: scale(.98,.98);
+      filter: brightness(250%);
+  }
+  @media only screen and (max-width: $small){
+      width: 100%;
+  }
+}
+
+.button--disabled{
+  background-color: var(--color--gray);
+  &:hover{
+      background-color: var(--color--gray);
+      color: var(--color--white);
+      cursor: not-allowed;
+  }
+  &:active{
+      transform: scale(1,1);
+      filter: brightness(100%);
+  }
+}

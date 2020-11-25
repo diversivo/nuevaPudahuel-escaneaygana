@@ -3,9 +3,8 @@ import { browserVersion, isSafari } from 'react-device-detect';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Form from '../components/contact/contact-form';
 import Branding from '../components/branding';
-
-import Bigboy from '../assets/images/bigboy.png';
 
 // import OutputLoad from '../components/contact/output-load';
 // import OutputError from '../components/contact/output-error';
@@ -41,29 +40,9 @@ const IndexPage = ({ location }) => {
     <div className="container">
       <div className="content">
         <Branding />
-        <h1 className="txt-center">COMO JUGAR</h1>
-        <div className="align-start-center">
-          <div className="number">1</div>
-          <h2>Escanea los QR</h2>
-        </div>
-        <div className="grid-2-col">
-          <div>
-            <p>Encuentra los códigos QR en los diferentes personajes ubicados en distintos puntos del aeropuerto.</p>
-            <p>Dependiendo de la zona en la que te encuentres podrás canjear distintos premios de las tiendas más cercanas a ti.</p>
-          </div>
-          <img src={Bigboy} alt="Personaje" />
-        </div>
-
-        <div className="align-start-center">
-          <div className="number">2</div>
-          <h2>Completa el formulario</h2>
-        </div>
-
-        <div className="align-start-center">
-          <div className="number">3</div>
-          <h2>¡Juega y descubre tu premio!</h2>
-        </div>
-
+        {warn ? warn : <Form location={location} />}
+        {/* <OutputLoad />
+        <OutputError /> */}
       </div>
     </div>
   </Layout>

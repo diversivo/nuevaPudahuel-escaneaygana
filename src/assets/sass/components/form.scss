@@ -1,0 +1,65 @@
+
+//forms
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 360px;
+  padding-top: 1em;
+  width: 100%;
+}
+
+label{
+  margin-top: .36em;
+  font-size: 14px;
+  width: 100%;
+}
+
+select{
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+input[type=text], input[type=date], select{
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 9px;
+  color: black;
+  padding: .64em 1.3em;
+  margin: .4em 0;
+  width: 100%;
+  &:hover{
+      border-color: cyan;
+  }
+  &:focus{
+      border-color: var(--color--green);
+      background-color: white;
+      outline: none;
+  }
+  &.error{
+      border-color: var(--color--red);
+  }
+}
+input::placeholder,input[type=date]::placeholder{
+  color: #B2B2B2;
+}
+
+.form__helper{
+  color: var(--color--red);
+  font-size: 11px;
+  font-weight: 700;
+  padding: .5em 1em;
+}
+
+.radio_content{
+  width: 100%;
+  padding-bottom: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 8px;
+}
