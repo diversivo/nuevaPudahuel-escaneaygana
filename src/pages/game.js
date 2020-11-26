@@ -17,11 +17,11 @@ const Game = ({ location }) => {
 
   const { state } = location;
 
-  const [winner, setWinner] = useState(5);
+  const [winner, setWinner] = useState(17);
   const [code, setCode] = useState('');
 
   if (typeof window !== 'undefined') {
- 
+
     if (!state || !state.email || !state.name || !state.birthDate) {
       navigate('/ruleta');
     }
@@ -58,6 +58,8 @@ const Game = ({ location }) => {
   }, [])
 
 
+  console.log('availableStores', availableStores);
+
 
   const submitToAPI = () => {
     const url = 'https://vy01mtf35c.execute-api.us-east-1.amazonaws.com/getPrize';
@@ -72,12 +74,22 @@ const Game = ({ location }) => {
       .then((result) => {
         // console.log('Success:', result);
         result.json().then((data) => {
-          // console.log('data', data);
-          setWinner(parseInt(data.id) - 1);
-          setCode(data.code);
+          if (data.result === 'error.') {
+            setWinner(17);
+            setCode('NO');
+          } else {
+            setWinner(parseInt(data.id) - 1);
+            setCode(data.code);
+          }
         })
+          .catch(() => {
+            setWinner(17);
+            setCode('NO');
+          })
       })
       .catch((error) => {
+        setWinner(17);
+        setCode('NO');
         console.error('Error:', error);
       });
   };

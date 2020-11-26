@@ -175,7 +175,7 @@
     "intrastore_prob": 0.6,
     "store_prob": 1,
     "legal_text": "Válido solo para local del Aeropuerto de Aantiago, sujeto a stock. Latte Alto gratis no incluye adicionales como sabores, leche alternativa y cambio de grano.",
-    "code": "amg.json",
+    "code": "alg.json",
     "code_type": "file"
   },
   {
@@ -197,7 +197,7 @@
     "intrastore_prob": 0.3,
     "store_prob": 1,
     "legal_text": "Válido solo para local del Aeropuerto de santiago, sujeto a stock. Sólo válido para tazón de Chile (SKU 44801224821).",
-    "code": "alg.json",
+    "code": "amg.json",
     "code_type": "file"
   },
   {
@@ -375,5 +375,29 @@
     "legal_text": "Válido solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos.",
     "code": "",
     "code_type": "generated"
+  },
+  {
+    "id": 18,
+    "img": "NPR",
+    "store": "Nuevo Pudahuel",
+    "promo_code": "NPR",
+    "stock": 1000000000,
+    "zone": [
+      0,
+      1,
+      2
+    ],
+    "promo_text": "Lo sentimos, perdiste!",
+    "gender": [
+      0,
+      1
+    ],
+    "min_edad": 0,
+    "max_edad": -1,
+    "intrastore_prob": 1,
+    "store_prob": 0.2,
+    "legal_text": "Recuerda que solo puedes participar un máximo de 3 veces por día.",
+    "code": "",
+    "code_type": "lose"
   }
 ]

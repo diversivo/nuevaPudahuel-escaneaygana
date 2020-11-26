@@ -20,7 +20,7 @@ const Ruleta = ({ location, submitToAPI, winner, code, maxPromos }) => {
   const loop = 2;
 
   useEffect(() => {
-    const range = [0, 9];
+    const range = [0, Config.length - 1];
     const titles = Config.map(e => e.promo_text);
 
     const legals = Config.map(e => e.legal_text);
@@ -140,12 +140,9 @@ const Ruleta = ({ location, submitToAPI, winner, code, maxPromos }) => {
   };
 
   const setPrice = (cod, win) => {
-    if (typeof document !== `undefined`) {
-      const winnerCard = document.getElementsByClassName("ms-slide__image")[win + loop];
 
-      console.log('winnerCard', winnerCard)
-      console.log('code', cod)
-      console.log('winner', win)
+    if (typeof document !== `undefined` && code !== 'NO') {
+      const winnerCard = document.getElementsByClassName("ms-slide__image")[win + loop];
 
       const rewardOverlay = document.createElement("div");
       const upperText = document.createElement("p");
