@@ -175,7 +175,7 @@
     "intrastore_prob": 0.6,
     "store_prob": 1,
     "legal_text": "solo para local de aeropuerto de santiago.o Sujeto a stock. Latte Alto gratis no incluye adicionales como sabores, leche alternativa y cambio de grano.",
-    "code": "amg.json",
+    "code": "alg.json",
     "code_type": "file"
   },
   {
@@ -197,7 +197,7 @@
     "intrastore_prob": 0.3,
     "store_prob": 1,
     "legal_text": "solo para local de aeropuerto de santiago. o Sujeto a stock. Sólo válido para tazón de Chile (SKU 44801224821)",
-    "code": "alg.json",
+    "code": "amg.json",
     "code_type": "file"
   },
   {

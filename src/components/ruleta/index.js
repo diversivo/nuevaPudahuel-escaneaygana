@@ -7,13 +7,14 @@ import testImage from '../../assets/images/ruleta_test.png';
 import Hand from '../../assets/svg/hand.svg';
 import Config from '../../assets/config/config.json';
 
-const Streaming = ({ location, submitToAPI, winner, code }) => {
+const Ruleta = ({ location, submitToAPI, winner, code }) => {
 
   // Variables to use later
   // var root = document.documentElement;
   const container = useRef(null);
   const [imgSlider, setImgSlider] = useState(null);
   const [spinToLeft, setSpinToLeft] = useState(null);
+  const [animIntervals, setAnimIntervals] = useState([]);
   const initialIndex = 5;
   const minMovement = 30;
   const loop = 2;
@@ -86,17 +87,17 @@ const Streaming = ({ location, submitToAPI, winner, code }) => {
         change: function (newIndex, oldIndex) {
           if (newIndex && oldIndex) {
             const toLeft = goLeft(newIndex, oldIndex);
-            console.log('Left?');
-            console.log(toLeft)
+            // console.log('Left?');
+            // console.log(toLeft)
             setSpinToLeft(toLeft);
-            animate(msImages, toLeft, winner, minMovement, false);
+            animate(msImages, toLeft, winner, minMovement, '123', false);
             if(firstTry){
               firstTry = false;
               submitToAPI();
             }
-            console.log(oldIndex);
-            console.log(newIndex);
-            console.log('==========');
+            // console.log(oldIndex);
+            // console.log(newIndex);
+            // console.log('==========');
           }
         }
       });
@@ -107,7 +108,8 @@ const Streaming = ({ location, submitToAPI, winner, code }) => {
 
 
   useEffect(() => {
-    if(code !== '') animate(imgSlider,spinToLeft, winner, minMovement, true);
+    if(!!code) animate(imgSlider,spinToLeft, winner, minMovement, code, true);
+    console.log('animae!!!', code)
   },[winner,code])
 
   const goLeft = (newIndex, oldIndex) =>
@@ -116,32 +118,36 @@ const Streaming = ({ location, submitToAPI, winner, code }) => {
       oldIndex - newIndex !== 1;
 
 
-  let animation = null;
-  let interval = null;
-
   const animate = (slider, toLeft, stopConditon, minIterations, code, override) => {
-    if(override){
-      clearInterval(interval);
-      animation = null;
+    if(override) {
+      console.log('animIntervals', animIntervals)
+      while (animIntervals.length){
+        clearInterval(animIntervals.pop());
+      }
+      // slider.select(stopConditon);
+      // slider.disable();
+      setPrice(code);
     }
-    if (!animation) {
+    if (!animIntervals.length) {
+      console.log('New Animation', code);
       let iterations = 0;
-      interval = setInterval(() => {
+      const interval = setInterval(() => {
         toLeft ? slider.next() : slider.prev();
         iterations += 1;
         if (slider.getCurrentIndex() === stopConditon && iterations >= minIterations) {
-          clearInterval(interval);
           slider.disable();
-          setPrice(code);
         }
       }, 100);
-      animation = interval
+     setAnimIntervals([...animIntervals, interval]);
     }
   };
 
-  const setPrice = (code) => {
+  const setPrice = () => {
     if (typeof document !== `undefined`) {
       const winnerCard = document.getElementsByClassName("ms-slide__image")[winner + loop];
+
+      console.log('winnerCard', winnerCard)
+      console.log('code', code)
 
       const rewardOverlay = document.createElement("div");
       const upperText = document.createElement("p");
@@ -149,12 +155,11 @@ const Streaming = ({ location, submitToAPI, winner, code }) => {
       const lowerText = document.createElement("p");
 
       upperText.innerText = "código canjeable";
-      codeButton.innerHTML = "HGLPWXC";
+      codeButton.innerHTML = code;
       codeButton.setAttribute("class", "reward__code");
       lowerText.innerText = "presenta el código en caja";
       rewardOverlay.setAttribute("class", "reward__overlay");
       lowerText.setAttribute("class", "reward__lower-text");
-
 
       rewardOverlay.appendChild(upperText);
       rewardOverlay.appendChild(codeButton);
@@ -166,7 +171,7 @@ const Streaming = ({ location, submitToAPI, winner, code }) => {
 
   return (
     <main ref={container} className="sliders-container overflow-hidden" >
-    <button className="spin-btn" onClick={() => animate(imgSlider, true, winner, minMovement)}>JUGAR</button>
+    <button className="spin-btn" onClick={() => animate(imgSlider, true, winner, minMovement, '', false)}>JUGAR</button>
     <div className="sliders__intructions align-center">
         <img src={Hand} alt="hand"/>
         <p>Desliza con la mano o pulsa en el botón</p>
@@ -175,4 +180,4 @@ const Streaming = ({ location, submitToAPI, winner, code }) => {
 }
 
 
-export default Streaming;
+export default Ruleta;

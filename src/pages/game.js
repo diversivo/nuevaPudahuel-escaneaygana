@@ -17,8 +17,8 @@ const Game = ({ location }) => {
 
   const { state } = location;
 
-  let winner = 3;
-  let code = '';
+  const [winner, setWinner] = useState(5);
+  const [code, setCode] = useState('');
 
   if (!state.email || !state.name || !state.birthDate) {
     navigate('/ruleta');
@@ -54,7 +54,7 @@ const Game = ({ location }) => {
     return [...acum, ...response]
   }, [])
 
-  
+
 
   const submitToAPI = () => {
     const url = 'https://vy01mtf35c.execute-api.us-east-1.amazonaws.com/getPrize';
@@ -72,9 +72,9 @@ const Game = ({ location }) => {
       .then((result) => {
         console.log('Success:', result);
         result.json().then((data) => {
-          console.log('data',data);
-          winner = data.id;
-          code = data.code;
+          console.log('data', data);
+          setWinner(parseInt(data.id) - 1 );
+          setCode(data.code);
         })
       })
       .catch((error) => {
