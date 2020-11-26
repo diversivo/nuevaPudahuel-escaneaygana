@@ -7,7 +7,7 @@ import testImage from '../../assets/images/ruleta_test.png';
 import Hand from '../../assets/svg/hand.svg';
 import Config from '../../assets/config/config.json';
 
-const Ruleta = ({ location, submitToAPI, winner, code }) => {
+const Ruleta = ({ location, submitToAPI, winner, code, maxPromos }) => {
 
   // Variables to use later
   // var root = document.documentElement;
@@ -15,7 +15,7 @@ const Ruleta = ({ location, submitToAPI, winner, code }) => {
   const [imgSlider, setImgSlider] = useState(null);
   const [spinToLeft, setSpinToLeft] = useState(null);
   const [animIntervals, setAnimIntervals] = useState([]);
-  const initialIndex = 5;
+  const initialIndex = Math.floor(Math.random() * maxPromos);
   const minMovement = 30;
   const loop = 2;
 
@@ -125,7 +125,7 @@ const Ruleta = ({ location, submitToAPI, winner, code }) => {
       console.log('New Animation', code, stopConditon);
       animationInterval = setInterval(() => {
         toLeft ? slider.next() : slider.prev();
-        iterator = iterator +1;
+        iterator = iterator + 1;
         if (slider.getCurrentIndex() === stopConditon && iterator >= minIterations && override) {
           setPrice(code, stopConditon);
           slider.disable();

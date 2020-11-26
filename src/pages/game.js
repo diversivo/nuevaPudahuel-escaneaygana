@@ -20,14 +20,17 @@ const Game = ({ location }) => {
   const [winner, setWinner] = useState(5);
   const [code, setCode] = useState('');
 
-  if (!state.email || !state.name || !state.birthDate) {
-    navigate('/ruleta');
+  if (typeof window !== 'undefined') {
+ 
+    if (!state || !state.email || !state.name || !state.birthDate) {
+      navigate('/ruleta');
+    }
   }
 
   const getAge = (birth) => {
     const today = new Date();
     const birthDate = new Date(birth);
-    const age = today.getFullYear() - birthDate.getFullYear();
+    let age = today.getFullYear() - birthDate.getFullYear();
     const m = today.getMonth() - birthDate.getMonth();
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
       age--;
@@ -35,14 +38,14 @@ const Game = ({ location }) => {
     return age;
   };
 
-  const edad = getAge(state.birthDate);
+  const edad = getAge(state ? state.birthDate : 0);
 
   const availableStores = Config.reduce((acum, elem) => {
     let response = [];
     const minEdad = elem.min_edad <= edad;
     const maxEdad = elem.max_edad > edad || elem.max_edad === -1;
-    const correctGender = elem.gender.includes(parseInt(state.gender));
-    const correctZone = elem.zone.includes(parseInt(state.zone));
+    const correctGender = elem.gender.includes(parseInt(state ? state.gender : 0));
+    const correctZone = elem.zone.includes(parseInt(state ? state.zone : 0));
     if (
       minEdad &&
       maxEdad &&
@@ -70,7 +73,7 @@ const Game = ({ location }) => {
         // console.log('Success:', result);
         result.json().then((data) => {
           // console.log('data', data);
-          setWinner(parseInt(data.id) - 1 );
+          setWinner(parseInt(data.id) - 1);
           setCode(data.code);
         })
       })
@@ -86,7 +89,7 @@ const Game = ({ location }) => {
     <div className="branding--ruleta">
       <Branding />
     </div>
-    <Ruleta submitToAPI={submitToAPI} winner={winner} code={code} />
+    <Ruleta submitToAPI={submitToAPI} winner={winner} code={code} maxPromos={availableStores.length} />
   </Layout>);
 }
 
