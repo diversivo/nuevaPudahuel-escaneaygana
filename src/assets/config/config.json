@@ -19,7 +19,7 @@
     "max_edad": -1,
     "intrastore_prob": 1,
     "store_prob": 1,
-    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos.",
     "code": "",
     "code_type": "generated"
   },
@@ -41,7 +41,7 @@
     "max_edad": -1,
     "intrastore_prob": 1,
     "store_prob": 1,
-    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos.",
     "code": "",
     "code_type": "generated"
   },
@@ -64,7 +64,7 @@
     "max_edad": -1,
     "intrastore_prob": 0.5,
     "store_prob": 1,
-    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos.",
     "code": "CLGOLD12",
     "code_type": "fixed"
   },
@@ -87,7 +87,7 @@
     "max_edad": -1,
     "intrastore_prob": 0.5,
     "store_prob": 1,
-    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos.",
     "code": "PLATINUM12CL",
     "code_type": "fixed"
   },
@@ -108,7 +108,7 @@
     "max_edad": 60,
     "intrastore_prob": 1,
     "store_prob": 1,
-    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos.",
     "code": "",
     "code_type": "generated"
   },
@@ -130,7 +130,7 @@
     "max_edad": -1,
     "intrastore_prob": 1,
     "store_prob": 1,
-    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos.",
     "code": "",
     "code_type": "generated"
   },
@@ -152,7 +152,7 @@
     "max_edad": -1,
     "intrastore_prob": 1,
     "store_prob": 1,
-    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos.",
     "code": "",
     "code_type": "generated"
   },
@@ -174,8 +174,8 @@
     "max_edad": -1,
     "intrastore_prob": 0.6,
     "store_prob": 1,
-    "legal_text": "solo para local de aeropuerto de santiago.o Sujeto a stock. Latte Alto gratis no incluye adicionales como sabores, leche alternativa y cambio de grano.",
-    "code": "alg.json",
+    "legal_text": "Válido solo para local del Aeropuerto de Aantiago, sujeto a stock. Latte Alto gratis no incluye adicionales como sabores, leche alternativa y cambio de grano.",
+    "code": "amg.json",
     "code_type": "file"
   },
   {
@@ -196,8 +196,8 @@
     "max_edad": -1,
     "intrastore_prob": 0.3,
     "store_prob": 1,
-    "legal_text": "solo para local de aeropuerto de santiago. o Sujeto a stock. Sólo válido para tazón de Chile (SKU 44801224821)",
-    "code": "amg.json",
+    "legal_text": "Válido solo para local del Aeropuerto de santiago, sujeto a stock. Sólo válido para tazón de Chile (SKU 44801224821).",
+    "code": "alg.json",
     "code_type": "file"
   },
   {
@@ -218,7 +218,7 @@
     "max_edad": -1,
     "intrastore_prob": 0.1,
     "store_prob": 1,
-    "legal_text": "Debe hacer una compra mínima de $1.000 para canjear el premio.",
+    "legal_text": "Se debe hacer una compra mínima de $1.000 para canjear el premio.",
     "code": "atg.json",
     "code_type": "file"
   },
@@ -240,7 +240,7 @@
     "max_edad": -1,
     "intrastore_prob": 1,
     "store_prob": 1,
-    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos.",
     "code": "",
     "code_type": "generated"
   },
@@ -262,7 +262,7 @@
     "max_edad": -1,
     "intrastore_prob": 0.6,
     "store_prob": 1,
-    "legal_text": "solo para locales del aeropuerto de stgo, hasta agotar stock",
+    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, hasta agotar stock.",
     "code": "",
     "code_type": "generated"
   },
@@ -284,7 +284,7 @@
     "max_edad": -1,
     "intrastore_prob": 0.4,
     "store_prob": 1,
-    "legal_text": "solo para locales del aeropuerto de stgo, hasta agotar stock",
+    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, hasta agotar stock.",
     "code": "",
     "code_type": "generated"
   },
@@ -306,7 +306,7 @@
     "max_edad": -1,
     "intrastore_prob": 1,
     "store_prob": 0.5,
-    "legal_text": "solo para locales del aeropuerto de stgo, hasta agotar stock",
+    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, hasta agotar stock.",
     "code": "",
     "code_type": "generated"
   },
@@ -328,7 +328,7 @@
     "max_edad": -1,
     "intrastore_prob": 0.4,
     "store_prob": 1,
-    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos.",
     "code": "",
     "code_type": "generated"
   },
@@ -350,7 +350,7 @@
     "max_edad": -1,
     "intrastore_prob": 0.4,
     "store_prob": 1,
-    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos.",
     "code": "",
     "code_type": "generated"
   },
@@ -372,7 +372,7 @@
     "max_edad": -1,
     "intrastore_prob": 0.2,
     "store_prob": 1,
-    "legal_text": "solo para locales del aeropuerto de stgo, no acumulable con otras promociones o descuentos",
+    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos.",
     "code": "",
     "code_type": "generated"
   }
