@@ -13,7 +13,7 @@ const Game = ({ location }) => {
 
   // ?name=hola&email=hola&birthDate=hola&gender=hola
 
-  console.log(location);
+  // console.log(location);
 
   const { state } = location;
 
@@ -59,9 +59,6 @@ const Game = ({ location }) => {
   const submitToAPI = () => {
     const url = 'https://vy01mtf35c.execute-api.us-east-1.amazonaws.com/getPrize';
     const data = { ...state, promos: availableStores };
-
-    console.log('availableStores', JSON.stringify(data));
-
     fetch(url, {
       method: 'POST',
       headers: {
@@ -70,9 +67,9 @@ const Game = ({ location }) => {
       body: JSON.stringify(data),
     })
       .then((result) => {
-        console.log('Success:', result);
+        // console.log('Success:', result);
         result.json().then((data) => {
-          console.log('data', data);
+          // console.log('data', data);
           setWinner(parseInt(data.id) - 1 );
           setCode(data.code);
         })
@@ -82,7 +79,7 @@ const Game = ({ location }) => {
       });
   };
 
-  console.log(Config);
+  // console.log(Config);
 
   return (<Layout>
     <SEO title="Desliza y gana - Nueva Pudahuel" />

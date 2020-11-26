@@ -59,7 +59,7 @@ const Ruleta = ({ location, submitToAPI, winner, code }) => {
         interactive: false
       });
 
-      let firstTry = true ;
+      let firstTry = true;
 
       // Initializing the images slider
       const msImages = new MomentumSlider({
@@ -90,10 +90,10 @@ const Ruleta = ({ location, submitToAPI, winner, code }) => {
             // console.log('Left?');
             // console.log(toLeft)
             setSpinToLeft(toLeft);
-            animate(msImages, toLeft, winner, minMovement, '123', false);
-            if(firstTry){
-              firstTry = false;
+            if (firstTry) {
+              animate(msImages, toLeft, winner, minMovement, '123', false);
               submitToAPI();
+              firstTry = false;
             }
             // console.log(oldIndex);
             // console.log(newIndex);
@@ -108,46 +108,44 @@ const Ruleta = ({ location, submitToAPI, winner, code }) => {
 
 
   useEffect(() => {
-    if(!!code) animate(imgSlider,spinToLeft, winner, minMovement, code, true);
-    console.log('animae!!!', code)
-  },[winner,code])
+    if (!!code) animate(imgSlider, spinToLeft, winner, minMovement, code, true);
+    console.log('WINNERCODE', code, winner)
+  }, [winner, code])
 
   const goLeft = (newIndex, oldIndex) =>
     newIndex > oldIndex ?
       newIndex - oldIndex === 1 :
       oldIndex - newIndex !== 1;
 
-
+  let intervalSet = false;
+  let animationInterval;
+  let iterator = 0;
   const animate = (slider, toLeft, stopConditon, minIterations, code, override) => {
-    if(override) {
-      console.log('animIntervals', animIntervals)
-      while (animIntervals.length){
-        clearInterval(animIntervals.pop());
-      }
-      // slider.select(stopConditon);
-      // slider.disable();
-      setPrice(code);
-    }
-    if (!animIntervals.length) {
-      console.log('New Animation', code);
-      let iterations = 0;
-      const interval = setInterval(() => {
+    if (!intervalSet) {
+      console.log('New Animation', code, stopConditon);
+      animationInterval = setInterval(() => {
         toLeft ? slider.next() : slider.prev();
-        iterations += 1;
-        if (slider.getCurrentIndex() === stopConditon && iterations >= minIterations) {
+        iterator = iterator +1;
+        if (slider.getCurrentIndex() === stopConditon && iterator >= minIterations && override) {
+          setPrice(code, stopConditon);
           slider.disable();
+          clearInterval(animationInterval);
         }
       }, 100);
-     setAnimIntervals([...animIntervals, interval]);
+      intervalSet = false;
+    } else {
+      clearInterval(animationInterval);
+      intervalSet = false;
     }
   };
 
-  const setPrice = () => {
+  const setPrice = (cod, win) => {
     if (typeof document !== `undefined`) {
-      const winnerCard = document.getElementsByClassName("ms-slide__image")[winner + loop];
+      const winnerCard = document.getElementsByClassName("ms-slide__image")[win + loop];
 
       console.log('winnerCard', winnerCard)
-      console.log('code', code)
+      console.log('code', cod)
+      console.log('winner', win)
 
       const rewardOverlay = document.createElement("div");
       const upperText = document.createElement("p");
@@ -155,7 +153,7 @@ const Ruleta = ({ location, submitToAPI, winner, code }) => {
       const lowerText = document.createElement("p");
 
       upperText.innerText = "código canjeable";
-      codeButton.innerHTML = code;
+      codeButton.innerHTML = cod;
       codeButton.setAttribute("class", "reward__code");
       lowerText.innerText = "presenta el código en caja";
       rewardOverlay.setAttribute("class", "reward__overlay");
@@ -171,11 +169,11 @@ const Ruleta = ({ location, submitToAPI, winner, code }) => {
 
   return (
     <main ref={container} className="sliders-container overflow-hidden" >
-    <button className="spin-btn" onClick={() => animate(imgSlider, true, winner, minMovement, '', false)}>JUGAR</button>
-    <div className="sliders__intructions align-center">
-        <img src={Hand} alt="hand"/>
+      <button className="spin-btn" onClick={() => animate(imgSlider, true, winner, minMovement, '', false)}>JUGAR</button>
+      <div className="sliders__intructions align-center">
+        <img src={Hand} alt="hand" />
         <p>Desliza con la mano o pulsa en el botón</p>
-    </div>
+      </div>
     </main>);
 }
 
