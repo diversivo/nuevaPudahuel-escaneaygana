@@ -10,7 +10,9 @@ import Mapfre from '../../assets/images/brands/mapfre.png';
 import Dunkin from '../../assets/images/brands/dunkin.png';
 import Britt from '../../assets/images/brands/britt.png';
 import Protegetuviaje from '../../assets/images/brands/protegetuviaje.png';
-import Caluga from '../../assets/images/brands/caluga.png'
+import Caluga from '../../assets/images/brands/caluga.png';
+import Fotokina from '../../assets/images/brands/fotokina.png';
+import Tamarugo from '../../assets/images/brands/tamarugo.png';
 
 const Brands = () => (
   <div className="grid-2-col">
@@ -24,8 +26,8 @@ const Brands = () => (
     <img src={Dunkin} alt="Marcas Adheridas" />
     <img src={Britt} alt="Marcas Adheridas" />
     <img src={Protegetuviaje} alt="Marcas Adheridas" />
-    <img src={Caluga} alt="Marcas Adheridas" />
-    <img src={Caluga} alt="Marcas Adheridas" />
+    <img src={Fotokina} alt="Marcas Adheridas" />
+    <img src={Tamarugo} alt="Marcas Adheridas" />
   </div>
 );
 

@@ -129,6 +129,9 @@ body{
         width: 120px;
         margin-bottom: 14px;
     }
+    &_message{
+        max-width: 190px;
+    }
     &--ruleta{
         .branding_message{
             width: 60%;
