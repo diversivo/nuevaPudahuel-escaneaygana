@@ -7,15 +7,15 @@ import testImage from '../../assets/images/ruleta_test.png';
 import Hand from '../../assets/svg/hand.svg';
 import Config from '../../assets/config/config.json';
 
-const Streaming = ({ location, submitToAPI }) => {
+const Streaming = ({ location, submitToAPI, winner, code }) => {
 
   // Variables to use later
   // var root = document.documentElement;
   const container = useRef(null);
   const [imgSlider, setImgSlider] = useState(null);
+  const [spinToLeft, setSpinToLeft] = useState(null);
   const initialIndex = 5;
   const minMovement = 30;
-  const winner = 3;
   const loop = 2;
 
   useEffect(() => {
@@ -88,7 +88,8 @@ const Streaming = ({ location, submitToAPI }) => {
             const toLeft = goLeft(newIndex, oldIndex);
             console.log('Left?');
             console.log(toLeft)
-            animate(msImages, toLeft, winner, minMovement);
+            setSpinToLeft(toLeft);
+            animate(msImages, toLeft, winner, minMovement, false);
             if(firstTry){
               firstTry = false;
               submitToAPI();
@@ -104,6 +105,11 @@ const Streaming = ({ location, submitToAPI }) => {
     }
   }, []);
 
+
+  useEffect(() => {
+    if(code !== '') animate(imgSlider,spinToLeft, winner, minMovement, true);
+  },[winner,code])
+
   const goLeft = (newIndex, oldIndex) =>
     newIndex > oldIndex ?
       newIndex - oldIndex === 1 :
@@ -111,23 +117,29 @@ const Streaming = ({ location, submitToAPI }) => {
 
 
   let animation = null;
-  const animate = (slider, toLeft, stopConditon, minIterations) => {
+  let interval = null;
+
+  const animate = (slider, toLeft, stopConditon, minIterations, code, override) => {
+    if(override){
+      clearInterval(interval);
+      animation = null;
+    }
     if (!animation) {
       let iterations = 0;
-      const interval = setInterval(() => {
+      interval = setInterval(() => {
         toLeft ? slider.next() : slider.prev();
         iterations += 1;
         if (slider.getCurrentIndex() === stopConditon && iterations >= minIterations) {
           clearInterval(interval);
           slider.disable();
-          setPrice();
+          setPrice(code);
         }
       }, 100);
       animation = interval
     }
   };
 
-  const setPrice = () => {
+  const setPrice = (code) => {
     if (typeof document !== `undefined`) {
       const winnerCard = document.getElementsByClassName("ms-slide__image")[winner + loop];
 

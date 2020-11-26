@@ -17,7 +17,10 @@ const Game = ({ location }) => {
 
   const { state } = location;
 
-  if(!state.email || !state.name || !state.birthDate){
+  let winner = 3;
+  let code = '';
+
+  if (!state.email || !state.name || !state.birthDate) {
     navigate('/ruleta');
   }
 
@@ -32,13 +35,14 @@ const Game = ({ location }) => {
     return age;
   };
 
+  const edad = getAge(state.birthDate);
+
   const availableStores = Config.reduce((acum, elem) => {
     let response = [];
-    const edad = getAge(state.birthDate);
-    const minEdad = elem.min_edad < edad;
+    const minEdad = elem.min_edad <= edad;
     const maxEdad = elem.max_edad > edad || elem.max_edad === -1;
     const correctGender = elem.gender.includes(parseInt(state.gender));
-    const correctZone = elem.zone.includes(parseInt(state.correctZone));
+    const correctZone = elem.zone.includes(parseInt(state.zone));
     if (
       minEdad &&
       maxEdad &&
@@ -50,9 +54,13 @@ const Game = ({ location }) => {
     return [...acum, ...response]
   }, [])
 
+  
+
   const submitToAPI = () => {
     const url = 'https://vy01mtf35c.execute-api.us-east-1.amazonaws.com/getPrize';
     const data = { ...state, promos: availableStores };
+
+    console.log('availableStores', JSON.stringify(data));
 
     fetch(url, {
       method: 'POST',
@@ -63,6 +71,11 @@ const Game = ({ location }) => {
     })
       .then((result) => {
         console.log('Success:', result);
+        result.json().then((data) => {
+          console.log('data',data);
+          winner = data.id;
+          code = data.code;
+        })
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -74,9 +87,9 @@ const Game = ({ location }) => {
   return (<Layout>
     <SEO title="Desliza y gana - Nueva Pudahuel" />
     <div className="branding--ruleta">
-    <Branding/>
+      <Branding />
     </div>
-    <Ruleta submitToAPI={submitToAPI} />
+    <Ruleta submitToAPI={submitToAPI} winner={winner} code={code} />
   </Layout>);
 }
 
