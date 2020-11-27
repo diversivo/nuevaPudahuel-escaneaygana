@@ -141,33 +141,50 @@ const Ruleta = ({ location, submitToAPI, winner, code, maxPromos }) => {
 
   const setPrice = (cod, win) => {
 
-    if (typeof document !== `undefined` && code !== 'NO') {
-      const winnerCard = document.getElementsByClassName("ms-slide__image")[win + loop];
+    if (typeof document !== `undefined`) {
+      if( code !== 'NO') {
+        const winnerCard = document.getElementsByClassName("ms-slide__image")[win + loop];
+  
+        const rewardOverlay = document.createElement("div");
+        const upperText = document.createElement("p");
+        const codeButton = document.createElement("button");
+        const lowerText = document.createElement("p");
+  
+        upperText.innerText = "código canjeable";
+        codeButton.innerHTML = cod;
+        codeButton.setAttribute("class", "reward__code");
+        lowerText.innerText = "presenta el código en caja";
+        rewardOverlay.setAttribute("class", "reward__overlay");
+        lowerText.setAttribute("class", "reward__lower-text");
+  
+        rewardOverlay.appendChild(upperText);
+        rewardOverlay.appendChild(codeButton);
+        rewardOverlay.appendChild(lowerText);
+  
+        winnerCard.appendChild(rewardOverlay);
 
-      const rewardOverlay = document.createElement("div");
-      const upperText = document.createElement("p");
-      const codeButton = document.createElement("button");
-      const lowerText = document.createElement("p");
+        const btn = document.getElementById('button');
+        const text = document.getElementById('text');
 
-      upperText.innerText = "código canjeable";
-      codeButton.innerHTML = cod;
-      codeButton.setAttribute("class", "reward__code");
-      lowerText.innerText = "presenta el código en caja";
-      rewardOverlay.setAttribute("class", "reward__overlay");
-      lowerText.setAttribute("class", "reward__lower-text");
+        btn.setAttribute("class", "spin-btn hide");
 
-      rewardOverlay.appendChild(upperText);
-      rewardOverlay.appendChild(codeButton);
-      rewardOverlay.appendChild(lowerText);
+        text.innerHTML = "¡Felicidades por tu premio!"
+      } else {
+        const btn = document.getElementById('button');
+        const text = document.getElementById('text');
 
-      winnerCard.appendChild(rewardOverlay);
+        btn.setAttribute("class", "spin-btn hide");
+        text.innerHTML = "Lo sentimos, puedes volver a intentarlo mas tarde."
+      }
     }
+
+  
   };
 
   return (
     <main ref={container} className="sliders-container overflow-hidden" >
-      <button className="spin-btn" onClick={() => animate(imgSlider, true, winner, minMovement, '', false)}>JUGAR</button>
-      <div className="sliders__intructions align-center">
+      <button className="spin-btn" id="button" onClick={() => animate(imgSlider, true, winner, minMovement, '', false)}>JUGAR</button>
+      <div className="sliders__intructions align-center" id="text">
         <img src={Hand} alt="hand" />
         <p>Desliza con la mano o pulsa en el botón</p>
       </div>

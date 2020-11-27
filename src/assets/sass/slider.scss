@@ -231,7 +231,7 @@ $ms-titles-slide-height: 100px;
 .ms--titles {
   position: absolute;
   // left: calc(50% + 4 - #{$ms-images-slide-width / 2});
-  top: calc(50% + 84px - #{$ms-titles-slide-height / 2});
+  top: calc(50% + 100px - #{$ms-titles-slide-height / 2});
   z-index: 1;
   pointer-events: none;
   text-align: center;
@@ -245,6 +245,8 @@ $ms-titles-slide-height: 100px;
     font-weight: 600;
     display: flex !important;
     flex-wrap: wrap;
+    padding-left: 10px;
+    padding-right: 10px;
 
     span{
       width: 90%;

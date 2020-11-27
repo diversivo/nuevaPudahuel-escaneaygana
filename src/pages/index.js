@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { browserVersion, isSafari } from 'react-device-detect';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import Branding from '../components/branding';
+import PopUp from '../components/popup';
 
 import Bigboy from '../assets/images/bigboy.png';
 import Brands from '../components/trademarks';
@@ -15,6 +16,7 @@ import Rrss from '../components/rrss';
 const IndexPage = ({ location }) => {
 
   const [warn, setWarn] = useState('');
+  const [popup, setPopup] = useState(false);
   useEffect(() => {
     setTimeout(function () {
       let warning = null;
@@ -40,6 +42,7 @@ const IndexPage = ({ location }) => {
 
   return <Layout>
     <SEO title="Nuevo Pudahuel - Escanea y Gana" />
+    <PopUp isOpen={popup} setPopup={setPopup} />
     <div className="container">
       <div className="content">
         <Branding />
@@ -55,7 +58,7 @@ const IndexPage = ({ location }) => {
           </div>
           <img src={Bigboy} alt="Personaje" />
         </div>
-
+        <button onClick={()=> setPopup(true)} className="spin-btn">  Ver Mapa</button>
         <div className="align-start-center">
           <div className="number">2</div>
           <h2>Completa el formulario</h2>
