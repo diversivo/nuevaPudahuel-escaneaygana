@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Mapa from '../../assets/images/mapa.jpg';
 
 const PopUp = ({isOpen,setPopup}) => {
 
@@ -11,13 +12,7 @@ const PopUp = ({isOpen,setPopup}) => {
       <div className="popup" onClick={prevent}>
         <div onClick={closePopUp} className="close-button">+</div>
         <div>
-          <p className="popup-text">
-            Por nuestro lanzamiento usa el código
-          </p>
-          <p className="codigo" >MARCHABLANCA</p>
-          <p className="popup-text">
-            para obtener un 20% de descuento hasta el jueves 22 de octubre
-          </p>
+          <img alt="mapa" src={Mapa} />
         </div>
       </div>
     </div>

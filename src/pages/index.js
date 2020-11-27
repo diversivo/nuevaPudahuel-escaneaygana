@@ -58,7 +58,9 @@ const IndexPage = ({ location }) => {
           </div>
           <img src={Bigboy} alt="Personaje" />
         </div>
+        <div class="txt-center">
         <button onClick={()=> setPopup(true)} className="spin-btn">  Ver Mapa</button>
+        </div>        
         <div className="align-start-center">
           <div className="number">2</div>
           <h2>Completa el formulario</h2>
