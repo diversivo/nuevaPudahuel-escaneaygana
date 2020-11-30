@@ -168,7 +168,7 @@ const Ruleta = ({ location, submitToAPI, winner, code, maxPromos }) => {
 
         btn.setAttribute("class", "spin-btn hide");
 
-        text.innerHTML = "¡Felicidades por tu premio!"
+        text.innerHTML = "¡Felicidades por tu premio! Presenta el código en la tienda. Este cupón también lo recibirás en tu correo."
       } else {
         const btn = document.getElementById('button');
         const text = document.getElementById('text');
