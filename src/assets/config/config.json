@@ -165,7 +165,7 @@
     "zone": [
       0
     ],
-    "promo_text": "Latte gratis por la compra de Croissant Pavo Queso",
+    "promo_text": "",
     "gender": [
       0,
       1
@@ -174,7 +174,7 @@
     "max_edad": -1,
     "intrastore_prob": 0.6,
     "store_prob": 1,
-    "legal_text": "Válido solo para local del Aeropuerto de Aantiago, sujeto a stock. Latte Alto gratis no incluye adicionales como sabores, leche alternativa y cambio de grano.",
+    "legal_text": "",
     "code": "alg.json",
     "code_type": "file"
   },
@@ -187,7 +187,7 @@
     "zone": [
       0
     ],
-    "promo_text": "Llévate un tazón de Chile por sólo $500 al comprar cualquier bebida tamaño Grande o Venti.",
+    "promo_text": "",
     "gender": [
       0,
       1
@@ -196,7 +196,7 @@
     "max_edad": -1,
     "intrastore_prob": 0.3,
     "store_prob": 1,
-    "legal_text": "Válido solo para local del Aeropuerto de santiago, sujeto a stock. Sólo válido para tazón de Chile (SKU 44801224821).",
+    "legal_text": "",
     "code": "amg.json",
     "code_type": "file"
   },
@@ -209,7 +209,7 @@
     "zone": [
       0
     ],
-    "promo_text": "¡Felicitaciones! ¡Ganaste un premio! Acércate a nuestra tienda para conocer el tazón o tumbler que has ganado.",
+    "promo_text": "",
     "gender": [
       0,
       1
@@ -218,7 +218,7 @@
     "max_edad": -1,
     "intrastore_prob": 0.1,
     "store_prob": 1,
-    "legal_text": "Se debe hacer una compra mínima de $1.000 para canjear el premio.",
+    "legal_text": "",
     "code": "atg.json",
     "code_type": "file"
   },

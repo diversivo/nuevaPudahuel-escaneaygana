@@ -33,11 +33,11 @@ const IndexPage = ({ location }) => {
       }
       setWarn(warning);
     }, 2000);
-    setTimeout(() => {
-      if (typeof window !== 'undefined') {
-        window.Tawk_API.hideWidget()
-      }
-    }, 200)
+    // setTimeout(() => {
+    //   if (typeof window !== 'undefined') {
+    //     window.Tawk_API.hideWidget()
+    //   }
+    // }, 200)
   }, [])
 
   return <Layout>

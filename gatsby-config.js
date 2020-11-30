@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Samsungb2bAtHome',
-    description: 'Streaming Lanzamiento s20 s20+.',
+    title: 'Nuevo Pudahuel Ruleta',
+    description: 'Juego de Ruleta Escanea y Gana',
     author: '@diversivocl',
     menuLinks: [
       {
@@ -48,13 +48,13 @@ module.exports = {
         bucketName: 'nuevapudahuel-escaneaygana',
       },
     },
-    {
-      resolve: `gatsby-plugin-tawk`,
-      options: {
-        tawkId: "5f563a7bf0e7167d000e1a94",
-        // get this from the tawk script widget
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-tawk`,
+    //   options: {
+    //     tawkId: "5f563a7bf0e7167d000e1a94",
+    //     // get this from the tawk script widget
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
