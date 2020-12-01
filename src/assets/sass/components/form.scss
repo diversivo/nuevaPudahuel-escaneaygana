@@ -63,3 +63,8 @@ input::placeholder,input[type=date]::placeholder{
   justify-content: space-around;
   margin-top: 8px;
 }
+
+.error{
+  display: inline;
+  color: red;
+}

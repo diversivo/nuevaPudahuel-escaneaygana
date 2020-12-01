@@ -41,7 +41,7 @@ const ContactForm = () => {
 
     if (email.length) {
       const mailformat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      setEmailError(mailformat.test(email) ? '' : 'El correo ingresado debe ser un correo corporativo válido.');
+      setEmailError(mailformat.test(email) ? '' : 'El correo ingresado debe ser un correo válido.');
     }
 
   }, [name, email, gender, zone, birthDate]);
