@@ -10,6 +10,8 @@ const ContactForm = () => {
   const [zone, setZone] = useState('');
   const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [birthDateError, setBirthDateError] = useState('');
+  const [genderError, setGenderError] = useState('');
   const [zoneError, setZoneError] = useState('');
 
   const firstRender = useRef(true);
@@ -25,6 +27,14 @@ const ContactForm = () => {
       setNameError(nameFormat.test(name) ? '' : 'Su nombre solo puede contener letras y espacios.');
     }
 
+    if (birthDate.length) {
+      setBirthDateError(birthDate === '' ? 'Seleccione su fecha de nacimiento.' : '');
+    }
+
+    if (gender.length) {
+      setGenderError(gender === '' ? 'Seleccione su sexo.' : '');
+    }
+
     if (zone.length) {
       setZoneError(zone === 'none' ? 'Seleccione en la zona en que se encuentra.' : '');
     }
@@ -34,21 +44,25 @@ const ContactForm = () => {
       setEmailError(mailformat.test(email) ? '' : 'El correo ingresado debe ser un correo corporativo válido.');
     }
 
-  }, [name, email]);
+  }, [name, email, gender, zone, birthDate]);
 
   const validForm = name.length &&
     email.length &&
     zone.length &&
+    gender.length &&
+    birthDate.length &&
     !nameError.length &&
     !emailError.length &&
-    !zoneError.length
+    !zoneError.length &&
+    !birthDateError.length &&
+    !genderError.length;
 
 
   const formClass = `button ${validForm ? '' : 'button--disabled'}`;
   console.log('FormValid', validForm);
 
   const today = new Date();
-  const dd = today.getDate();
+  let dd = today.getDate();
   const mm = today.getMonth() + 1; //January is 0!
   const yyyy = today.getFullYear();
   if (dd < 10) {
@@ -97,6 +111,7 @@ const ContactForm = () => {
           placeholder="dd/mm/aaaa"
           max={hoy}
           value={birthDate}
+          className={birthDateError.length ? 'error' : ''}
           onChange={(e) => setBirthDate(e.target.value)}
         />
       </label>
@@ -110,6 +125,7 @@ const ContactForm = () => {
           value="0"
           checked={gender === "0"}
           onChange={(e) => setGender(e.target.value)}
+          className={genderError.length ? 'error' : ''}
         />
         <label htmlFor="masculino">Masculino</label>
         <input
@@ -119,6 +135,7 @@ const ContactForm = () => {
           value="1"
           checked={gender === "1"}
           onChange={(e) => setGender(e.target.value)}
+          className={genderError.length ? 'error' : ''}
         />
         <label htmlFor="femenino">Femenino</label>
       </div>

@@ -399,5 +399,26 @@
     "legal_text": "Recuerda que solo puedes participar un máximo de 3 veces por día.",
     "code": "",
     "code_type": "lose"
+  },
+  {
+    "id": 19,
+    "img": "SCD",
+    "store": "Nuevo Pudahuel",
+    "promo_code": "SCD",
+    "stock": 1000000000,
+    "zone": [
+      0,
+      1,
+      2
+    ],
+    "promo_text": "",
+    "gender": [],
+    "min_edad": 0,
+    "max_edad": -1,
+    "intrastore_prob": 0,
+    "store_prob": 0,
+    "legal_text": "",
+    "code": "",
+    "code_type": "init"
   }
 ]

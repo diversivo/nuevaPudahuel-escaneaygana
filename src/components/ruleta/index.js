@@ -15,7 +15,8 @@ const Ruleta = ({ location, submitToAPI, winner, code, maxPromos }) => {
   const [imgSlider, setImgSlider] = useState(null);
   const [spinToLeft, setSpinToLeft] = useState(null);
   const [animIntervals, setAnimIntervals] = useState([]);
-  const initialIndex = Math.floor(Math.random() * maxPromos);
+  // const initialIndex = Math.floor(Math.random() * maxPromos);
+  const initialIndex = 18;
   const minMovement = 30;
   const loop = 2;
 
