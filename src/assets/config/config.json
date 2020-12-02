@@ -420,5 +420,29 @@
     "legal_text": "",
     "code": "",
     "code_type": "init"
+  },
+  {
+    "id": 20,
+    "img": "DKN",
+    "store": "Dunkin",
+    "promo_code": "DKN",
+    "stock": 1000,
+    "zone": [
+      0,
+      1,
+      2
+    ],
+    "promo_text": "ICED LATTE M GRATIS",
+    "gender": [
+      0,
+      1
+    ],
+    "min_edad": 0,
+    "max_edad": -1,
+    "intrastore_prob": 1,
+    "store_prob": 1,
+    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos, hasta agotar stock.",
+    "code": "dunkin.json",
+    "code_type": "file"
   }
 ]
