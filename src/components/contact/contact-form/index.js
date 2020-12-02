@@ -28,7 +28,7 @@ const ContactForm = () => {
     }
 
     if (birthDate.length) {
-      setBirthDateError(birthDate === '' ? 'Seleccione su fecha de nacimiento.' : '');
+      setBirthDateError(birthDate === '' ? 'Ingrese su edad.' : '');
     }
 
     if (gender.length) {
@@ -95,7 +95,7 @@ const ContactForm = () => {
           name="email"
           id="email-input"
           type="text"
-          placeholder="Correo corporativo"
+          placeholder="ejemplo@mail.com"
           value={email}
           className={emailError.length ? 'error' : ''}
           onChange={(e) => setEmail(e.target.value)}
@@ -103,12 +103,12 @@ const ContactForm = () => {
         <p className="form__helper">{emailError}</p>
       </label>
       <label htmlFor="phone-input">
-        Fecha de nacimiento
+        Edad
         <input
           name="date"
           id="date-input"
-          type="date"
-          placeholder="dd/mm/aaaa"
+          type="number"
+          placeholder="Ej: 35"
           max={hoy}
           value={birthDate}
           className={birthDateError.length ? 'error' : ''}

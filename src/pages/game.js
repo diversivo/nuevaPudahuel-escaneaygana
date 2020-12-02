@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { navigate } from 'gatsby';
 
 import Layout from '../components/layout';
@@ -27,18 +27,18 @@ const Game = ({ location }) => {
     }
   }
 
-  const getAge = (birth) => {
-    const today = new Date();
-    const birthDate = new Date(birth);
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-      age--;
-    }
-    return age;
-  };
+  // const getAge = (birth) => {
+  //   const today = new Date();
+  //   const birthDate = new Date(birth);
+  //   let age = today.getFullYear() - birthDate.getFullYear();
+  //   const m = today.getMonth() - birthDate.getMonth();
+  //   if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+  //     age--;
+  //   }
+  //   return age;
+  // };
 
-  const edad = getAge(state ? state.birthDate : 0);
+  const edad = state ? state.birthDate : 0;
 
   const availableStores = Config.reduce((acum, elem) => {
     let response = [];
@@ -58,7 +58,7 @@ const Game = ({ location }) => {
   }, [])
 
 
-  console.log('availableStores', availableStores);
+  // console.log('availableStores', availableStores);
 
 
   const submitToAPI = () => {
