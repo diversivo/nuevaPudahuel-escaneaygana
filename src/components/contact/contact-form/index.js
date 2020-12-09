@@ -31,6 +31,10 @@ const ContactForm = () => {
       setBirthDateError(birthDate === '' ? 'Ingrese su edad.' : '');
     }
 
+    if(birthDate < 0){
+      setBirthDate(0);
+    }
+
     if (gender.length) {
       setGenderError(gender === '' ? 'Seleccione su sexo.' : '');
     }
@@ -98,7 +102,7 @@ const ContactForm = () => {
           placeholder="ejemplo@mail.com"
           value={email}
           className={emailError.length ? 'error' : ''}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value.trim())}
         />
         <p className="form__helper">{emailError}</p>
       </label>
@@ -110,6 +114,7 @@ const ContactForm = () => {
           type="number"
           placeholder="Ej: 35"
           max={hoy}
+          min={0}
           value={birthDate}
           className={birthDateError.length ? 'error' : ''}
           onChange={(e) => setBirthDate(e.target.value)}
@@ -147,7 +152,7 @@ const ContactForm = () => {
         onChange={(e) => setZone(e.target.value)}
       >
         <option value="none">Zona en la que estás ahora</option>
-        <option value={2}>Hall Principal</option>
+        <option value={2}>Hall Público</option>
         <option value={0}>Embarque Nacional</option>
         <option value={1}>Embarque Internacional</option>
       </select>

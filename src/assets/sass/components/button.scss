@@ -33,6 +33,7 @@
 
 .button--disabled{
   background-color: var(--color--gray);
+  pointer-events: none;
   &:hover{
       background-color: var(--color--gray);
       color: var(--color--white);

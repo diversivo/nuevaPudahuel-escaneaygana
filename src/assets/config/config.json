@@ -40,7 +40,7 @@
     "min_edad": 0,
     "max_edad": -1,
     "intrastore_prob": 1,
-    "store_prob": 1,
+    "store_prob": 0.4,
     "legal_text": "Válido solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos.",
     "code": "",
     "code_type": "generated"
@@ -52,7 +52,6 @@
     "promo_code": "DFR1",
     "stock": 2500,
     "zone": [
-      0,
       1
     ],
     "promo_text": "Ganaste membresía RED By Dufry GOLD",
@@ -75,7 +74,6 @@
     "promo_code": "DFR2",
     "stock": 2500,
     "zone": [
-      0,
       1
     ],
     "promo_text": "Ganaste membresía RED By Dufry PLATINUM",
@@ -429,9 +427,30 @@
     "stock": 1000,
     "zone": [
       0,
-      1
+      2
     ],
     "promo_text": "ICED LATTE M GRATIS",
+    "gender": [
+      1
+    ],
+    "min_edad": 0,
+    "max_edad": -1,
+    "intrastore_prob": 1,
+    "store_prob": 1,
+    "legal_text": "Solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos. Debe acercarse a Llegadas o Salidas de área internacional para validar la promoción.",
+    "code": "dunkin.json",
+    "code_type": "file"
+  },
+  {
+    "id": 21,
+    "img": "PSD",
+    "store": "Porsche Design",
+    "promo_code": "PSD",
+    "stock": 3000,
+    "zone": [
+      1
+    ],
+    "promo_text": "20% de descuento en lentes y mochilas, bolsos y maletas.",
     "gender": [
       0,
       1
@@ -440,8 +459,8 @@
     "max_edad": -1,
     "intrastore_prob": 1,
     "store_prob": 1,
-    "legal_text": "Válido solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos, hasta agotar stock.",
-    "code": "dunkin.json",
-    "code_type": "file"
+    "legal_text": "Solo para locales del Aeropuerto de Santiago, no acumulable con otras promociones o descuentos.",
+    "code": "",
+    "code_type": "generated"
   }
 ]
